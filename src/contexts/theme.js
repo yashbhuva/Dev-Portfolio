@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { light } from '@material-ui/core/styles/createPalette'
 
 const ThemeContext = createContext()
 
@@ -16,7 +15,7 @@ const ThemeProvider = ({ children }) => {
   }, [])
 
   const toggleTheme = () => {
-    const name = themeName === 'dark' ? 'light' : 'light'
+    const name = themeName === 'dark' ? 'light' : 'dark'
     localStorage.setItem('themeName', name)
     setThemeName(name)
   }
